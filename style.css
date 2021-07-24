@@ -35,6 +35,8 @@ img{max-width:100%;}
 .padded-0 { padding: 0; }
 .padded-b-0 { padding-bottom: 0; }
 .margin-b-0 { margin-bottom: 0; }
+.margin-b-1{margin-bottom: 1rem;}
+.margin-b-2{margin-bottom:2rem;}
 
 .text-center{text-align: center;}
 .text-right{text-align: right;}
@@ -67,6 +69,8 @@ img{max-width:100%;}
     background-repeat: no-repeat;
 }
 .profile-img{border-radius:100%;}
+
+.landscape{padding-bottom:60%;}
 
 .bg-plant{
     background-image: url('/images/plant.jpg');
@@ -127,6 +131,10 @@ a:hover { color: #a2745c; }
     font-weight: 400;
 }
 
+.logo a{
+    text-decoration: none;
+}
+
 .button {
   text-decoration: none;
   border: 2px solid; 
@@ -138,6 +146,15 @@ a:hover { color: #a2745c; }
 
 .bg-dark .button:hover {
     color: #d3b4a2;
+}
+
+.button-dark {
+  text-decoration: none;
+  border: 2px solid; 
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  font-weight: 400;
+  color: #A3755C;
 }
 
 /* ----------------------Icon Grid----------------------------------------------- */
@@ -163,6 +180,44 @@ a:hover { color: #a2745c; }
     left: 0; 
     width: 100%; 
     height: 100%; 
+}
+
+/* ----------------------Contact Form-------------------------------------------- */
+form input, 
+form textarea{
+  width:90%;
+  margin: 0.5rem;
+  padding:0.5rem;
+  border: 2px solid #a2745c;
+  outline:none;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+form input:focus,
+form textarea:focus{
+  border-color: #9b9b81;
+}
+
+textarea{
+  min-height: 4rem;
+}
+
+form label{
+  margin-top: 1rem;  /*Inputs default inline elements need to change display*/
+  display:block; 
+  color: #a2745c;
+  font-weight:bold;
+}
+
+form .button{
+  border: 2px solid #a2745c;
+  background:none;
+  color:#a2745c;
+  padding: 0.5rem 2rem;
+  letter-spacing: 0.1em;
+  margin: 0.5rem;
+  font-weight:bold;
 }
 
 /* ----------------------Header + Footers---------------------------------------- */
@@ -191,12 +246,13 @@ footer a:hover {
 
     .flex-flip-sm { flex-direction: column-reverse; }
 
-    .bg-plant {
-        background-image: url('/images/plant-light.png');
-    }
-    
+    .bg-plant {background-image: url('/images/plant-light.png'); }
     .bg-plant-2 {
         background-image: url('/images/plant-2-light.png');
         background-position: 45% 50%;
     }
+    .mob-p-t-0{padding-top:0;}
+    .mob-p-b-0{padding-bottom:4rem;}
+
+    .sm-text{font-size: 2rem;}
 }

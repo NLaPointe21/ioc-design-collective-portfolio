@@ -1,5 +1,59 @@
 ---
 layout: default
+features:
+ - title: Noa Olivia Website
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, dolores! Accusantium, quibusdam pariatur eligendi unde explicabo quam in adipisci doloribus, quis officiis ducimus corporis blanditiis ullam, necessitatibus dolor animi sit?
+   featured_image: /images/placeholder-project.png
+ - title: Noa Olivia Website
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, dolores! Accusantium, quibusdam pariatur eligendi unde explicabo quam in adipisci doloribus, quis officiis ducimus corporis blanditiis ullam, necessitatibus dolor animi sit?
+   featured_image: /images/placeholder-project.png
 ---  
 
-<section>S</section>
+<section class="bg-image bg-plant-2 padded tall-70 grid-middle-right">
+    <div class="col-6_sm-10 text-right editable">
+        <h2>Our Services</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aliquam qui laborum? Dignissimos inventore nulla cum nostrum nesciunt. Voluptates ea odio, aut ullam vel quam explicabo. Ex, beatae. Amet, soluta.</p>
+    </div>
+</section>
+
+<section class="padded bg-green">
+    <div class="capped-width grid">
+        <div class="col-4_xs-12 padded-1 editable">
+            <h3>Design.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis dolorem incidunt commodi sed non natus? Assumenda cupiditate consectetur adipisicing elit. Nobis dolorem incidunt commodi sed non natus? Assumenda cupiditate maxime te.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis dolorem incidunt commodi sed non natus? Assumenda cupiditate.</p>
+        </div>
+            <div class="col-4_xs-12 padded-1 editable">
+            <h3>Build.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis dolorem incidunt commodi sed non natus? Assumenda cupiditate consectetur adipisicing elit. Nobis dolorem incidunt commodi sed non natus? Assumenda cupiditate maxime te.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis dolorem incidunt commodi sed non natus? Assumenda cupiditate.</p>
+
+        </div>
+            <div class="col-4_xs-12 padded-1 editable">
+            <h3>Design & Build.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis dolorem incidunt commodi sed non natus? Assumenda cupiditate consectetur adipisicing elit. Nobis dolorem incidunt commodi sed non natus? Assumenda cupiditate maxime te.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis dolorem incidunt commodi sed non natus? Assumenda cupiditate.</p>
+
+        </div>
+        <div class="col-12 padded-1 text-center">
+            <a href="/contact.html" class="button">Get in Touch</a>
+        </div>
+    </div>
+</section>
+
+{% include newsletter-signup.html %}
+
+<section class="capped-width">
+    {% for item in page.features %}
+        <div class="grid flex-flip-alternate">
+            <div class="col-5_sm-12-middle padded">
+                <h3> {{item.title}} </h3>
+                <p> {{item.description}}</p>
+            </div>
+            
+            <div class="col-7_sm-12-middle padded">
+                <img src="{{item.featured_image}}" alt="{{item.title}}">    
+            </div>
+        </div>
+    {% endfor %}
+</section>
